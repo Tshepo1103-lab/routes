@@ -6,6 +6,7 @@ import ClientLayout from "./layouts/client";
 import EmptyLayout from "./layouts/empty";
 import Login from "./pages/login";
 import withAuth from "./hoc/withAuth";
+import ProductsPage from "./pages/products";
 
 // Wrap components with authentication
 const ProtectedHome = withAuth(Home, { allowedRoles: ['admin'] });
@@ -27,7 +28,8 @@ const App = () => {
       {/* Protected Admin Routes */}
       <Route path="/admin" element={<ProtectedAdminLayout />}>
         <Route index element={<ProtectedHome />} />
-        <Route path="home" element={<ProtectedHome />} />
+        <Route path="home" element={< ProtectedHome/>} />
+        <Route path="products" element={<ProductsPage/>}/>
       </Route>
 
       {/* Protected Client Routes */}

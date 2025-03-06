@@ -2,7 +2,7 @@ import { Layout, Menu, theme, Typography } from 'antd';
 import { Outlet, Link } from 'react-router-dom';
 import { HomeOutlined, DashboardOutlined } from '@ant-design/icons';
 import { ProductProvider } from "../providers/productProvider";
-import Navbar from '../components/navbar';
+import Navbar from '../components/navbar/navbar';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { Title } = Typography;
